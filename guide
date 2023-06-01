@@ -1,0 +1,6 @@
+// Basics
+Edit X:getctxs/\+Errors: 1,$d
+X:getctxs/.*\.go: w
+
+{go build}
+./getctxs
