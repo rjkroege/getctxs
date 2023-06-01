@@ -29,9 +29,9 @@ func genAlfredResult(tpf string, args []string) {
 	th := make(map[string]int)
 	// Keep a running count of all of the match lengths
 	for _, t := range tags {
-log.Println("tag", t, pr)
+		log.Println("tag", t, pr)
 		if (strings.HasPrefix(t, pr) || strings.HasPrefix(strings.ToUpper(t), strings.ToUpper(pr))) && pr != t {
-log.Println("prefix matched")
+			log.Println("prefix matched")
 			// TODO(rjk): I have something weird happening here?
 			if s, ok := th[t]; !ok || s < len(pr) {
 				th[t] = len(pr)
